@@ -1,0 +1,177 @@
+body{
+    background: #222222;
+    color: antiquewhite;
+    font-family: Futura, "futura-pt", sans-serif;
+}
+main{
+    margin: 40px 60px 60px 60px;
+}
+/*Header Contents*/
+div.header{
+    margin-top: -150px;
+    /*background: coral;*/
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+p.webpage-title{
+    margin: 0;
+    font-size: 80px;
+    align-self: flex-start;
+}
+p.webpage-title span{
+    font-size: 40px;
+}
+div.links{
+    margin: 35px 0 0 0;
+    /*background: brown;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+div.links a{
+    margin: 10px;
+}
+div.links a svg{
+    /*background: cornflowerblue;*/
+    width: 2em;
+    height: 2em;
+    fill: antiquewhite;
+}
+div.links a svg:hover {
+    fill: #ed5784;
+}
+
+
+/*Main Content*/
+div.content{
+    /*background: cornflowerblue;*/
+    margin: 0 15px 0 0;
+}
+p.webpage-title-subtitle{
+    margin: 0;
+    font-size: 20px;
+    font-family: "greycliff-cf", sans-serif;
+    color: #929292;
+    font-style: italic;
+}
+div.grid-container {
+    margin: 80px 0 0 0;
+    columns: 3 350px;
+    column-gap: 3rem;
+    width: 100%;
+}
+div.grid-container div {
+    margin: 1.5rem 0 1.5rem 0;
+    display: inline-block;
+    width: 100%;
+    border: dashed 1px #ed578450;
+    padding: 5px;
+    background: #00000050;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+}
+div.grid-container div:hover {
+    background: #11070a50;
+    border-color: #ed5784;
+}
+div.grid-container div:hover img {
+    /*filter: grayscale(0);*/
+    cursor: pointer;
+}
+div.grid-container div img {
+    width: 100%;
+    /*filter: grayscale(100%);*/
+    border-radius: 8px;
+    transition: all .25s ease-in-out;
+    margin-bottom: -8px;
+}
+.art-title{
+    color: #929292;
+    font-size: 30px;
+    overflow: auto;
+    scrollbar-width: none;
+    margin-bottom: 0;
+    margin-top: 8px;
+    margin-left: 2px;
+    transition: all 0.5s linear;
+}
+div.grid-container div:hover .art-title {
+    color: #ed5784;
+    cursor: pointer;
+}
+.art-description{
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: 16px;
+    color: #929292;
+    font-family: "greycliff-cf", sans-serif;
+    font-weight: lighter;
+}
+.artist_statement{
+    font-size: 12px;
+    background: #ed5784;
+    border: 1px solid ;
+    color: black;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    opacity: 0;
+    text-decoration: none;
+}
+div.grid-container div:hover .artist_statement {
+    opacity: 100%;
+}
+.artist_statement:hover{
+    background: #ed5784;
+    border: 1px solid #ed5784;
+}
+.art-date{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    color: #797979;
+}
+
+/*Foot Content*/
+div.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "greycliff-cf", sans-serif;;
+    font-weight: lighter;
+    color: lightgrey;
+}
+p.credit{
+    margin: 0;
+}
+p.credit a{
+    color: #ed5784;
+}
+p.year{
+}
+
+
+@media screen and (max-width: 60em) {
+    main{
+        margin: 5px;
+    }
+    div.links{
+        margin: -5px;
+    }
+    p.webpage-title{
+        font-size: 32px;
+    }
+    p.webpage-title span{
+        font-size: 20px;
+    }
+    p.webpage-title-subtitle{
+        font-size: 12px;
+    }
+    div.grid-container{
+        margin-top: 20px;
+    }
+
+}
