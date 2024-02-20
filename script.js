@@ -1,13 +1,17 @@
 function handleMouseMove(event, id) {
-    const element = document.getElementById(id)
-    // Calculate the mouse position relative to the container
-    const mouseX = event.offsetX/15;
-    const mouseY = event.offsetY/15;
-    console.log(`${mouseX}, ${mouseY}`)
+    if (window.innerWidth > 768){
+        const element = document.getElementById(id)
+        // Calculate the mouse position relative to the container
+        const mouseX = event.offsetX/15;
+        const mouseY = event.offsetY/15;
 
-    // Apply scaling to the element
-    element.style.transition = `all 0.5s linear`
-    element.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(${1.03})`;
+        // Apply scaling to the element
+        element.style.transition = `all 0.5s linear`
+        element.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(${1.03})`;
+    }
+    else{
+        console.log("Some Effect is disabled due to small screen")
+    }
 }
 function handleMouseLeave(id){
     const element = document.getElementById(id)
